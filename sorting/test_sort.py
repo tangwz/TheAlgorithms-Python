@@ -3,6 +3,7 @@ from sorting.bubble_sort import bubble_sort
 from sorting.quick_sort import quick_sort, quick_sort_v2
 from sorting.selection_sort import selection_sort
 from sorting.shell_sort import shell_sort, shell_sort_v2
+from sorting.heap_sort import heap_sort
 
 
 class TestSort(unittest.TestCase):
@@ -17,6 +18,7 @@ class TestSort(unittest.TestCase):
         self._test_sort(selection_sort, input_list[:])
         self._test_sort(shell_sort, input_list[:])
         self._test_sort(shell_sort_v2, input_list[:])
+        self._test_sort(heap_sort, input_list[:])
 
     def test_sort_with_positive_numbers(self):
         input_list = [5, 5, 7, 8, 2, 4, 1]
