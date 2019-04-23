@@ -4,6 +4,7 @@ from sorting.quick_sort import quick_sort, quick_sort_v2
 from sorting.selection_sort import selection_sort
 from sorting.shell_sort import shell_sort, shell_sort_v2
 from sorting.heap_sort import heap_sort
+from sorting.merge_sort import merge_sort
 
 
 class TestSort(unittest.TestCase):
@@ -19,11 +20,14 @@ class TestSort(unittest.TestCase):
         self._test_sort(shell_sort, input_list[:])
         self._test_sort(shell_sort_v2, input_list[:])
         self._test_sort(heap_sort, input_list[:])
+        self._test_sort(merge_sort, input_list[:])
 
     def test_sort_with_positive_numbers(self):
         input_list = [5, 5, 7, 8, 2, 4, 1]
         self._test_sort_all_funcs(input_list)
         input_list = [6, 1, 2, 7, 9, 3, 4, 5, 10, 8]
+        self._test_sort_all_funcs(input_list)
+        input_list = [1, 4, 2, 3.6, -1, 0, 25, -34, 8, 9, 1, 0]
         self._test_sort_all_funcs(input_list)
 
     def test_sort_negative_numbers_only(self):
