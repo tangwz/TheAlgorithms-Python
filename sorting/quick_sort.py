@@ -1,5 +1,5 @@
 def quick_sort(collection):
-    """Pure implement of bubble sort algorithm in Python
+    """Pure implement of quick sort algorithm in Python
 
     :param collection: ome mutable ordered collection with heterogeneous
     comparable items inside
@@ -32,7 +32,7 @@ def quick_sort(collection):
 
 
 def quick_sort_v2(collection):
-    """Pure implement of bubble sort algorithm in Python
+    """Pure implement of quick sort algorithm in Python
 
     :param collection: ome mutable ordered collection with heterogeneous
     comparable items inside

@@ -14,7 +14,7 @@ def heapify(lst, index, heap_size):
 
 
 def heap_sort(collection):
-    """Pure implement of bubble sort algorithm in Python
+    """Pure implement of heap sort algorithm in Python
 
     :param collection: some mutable ordered collection with heterogeneous
     comparable items inside
