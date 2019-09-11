@@ -5,6 +5,8 @@ from sorting.selection_sort import selection_sort
 from sorting.shell_sort import shell_sort, shell_sort_v2
 from sorting.heap_sort import heap_sort
 from sorting.merge_sort import merge_sort
+from sorting.insertion_sort import insertion_sort
+from sorting.bucket_sort import bucket_sort
 
 
 class TestSort(unittest.TestCase):
@@ -21,6 +23,8 @@ class TestSort(unittest.TestCase):
         self._test_sort(shell_sort_v2, input_list[:])
         self._test_sort(heap_sort, input_list[:])
         self._test_sort(merge_sort, input_list[:])
+        self._test_sort(insertion_sort, input_list[:])
+        self._test_sort(bucket_sort, input_list[:])
 
     def test_sort_with_positive_numbers(self):
         input_list = [5, 5, 7, 8, 2, 4, 1]
@@ -56,4 +60,8 @@ class TestSort(unittest.TestCase):
 
     def test_bubble_sort_disorder_with_repetitions(self):
         input_list = [3, 5, 3, 2, 4, 2, 1, 1]
+        self._test_sort_all_funcs(input_list)
+
+    def test_one_number(self):
+        input_list = [1]
         self._test_sort_all_funcs(input_list)

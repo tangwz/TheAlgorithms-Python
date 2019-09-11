@@ -1,4 +1,4 @@
-def count_sort(collection):
+def counting_sort(collection):
     if not collection:
         return
     maximum = max(collection)
@@ -16,4 +16,4 @@ def count_sort(collection):
 
 
 if __name__ == '__main__':
-    print(count_sort([5, -5, 7, 8, 2, 4, 1]))
+    print(counting_sort([5, -5, 7, 8, 2, 4, 1]))
